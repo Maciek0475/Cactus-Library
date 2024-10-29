@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mac2work</groupId>
-	<artifactId>cactus-library2</artifactId>
+	<artifactId>cactus-library</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cactus-library2</name>
+	<name>cactus-library</name>
 	<description>Library for Cactus Calendar</description>
-	<url>https://github.com/Maciek0475/Cactus-Calendar/tree/master/cactus-library</url>
+	<url>https://maven.pkg.github.com/Maciek0475/Cactus-Library</url>
 	<licenses>
-		<license/>
+		<license />
 	</licenses>
 	<developers>
-		<developer/>
+		<developer />
 	</developers>
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection />
+		<developerConnection />
+		<tag />
+		<url />
 	</scm>
 	<properties>
 		<java.version>17</java.version>
@@ -34,9 +35,9 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-		<dependency> 
-   			<groupId>org.springframework.boot</groupId> 
-   			<artifactId>spring-boot-starter-validation</artifactId> 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -67,15 +68,26 @@
 						</exclude>
 					</excludes>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
+
 		</plugins>
 	</build>
 	<distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>cactus-library2</name>
-            <url>https://github.com/Maciek0475/Cactus-Calendar/tree/master/cactus-library</url>
-        </repository>
-    </distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>Cactus-Library</name>
+			<url>https://maven.pkg.github.com/Maciek0475/Cactus-Library</url>
+		</repository>
+	</distributionManagement>
 
 </project>
